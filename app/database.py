@@ -26,3 +26,13 @@ def create_table():
     """)
     connection.commit()
     connection.close()
+
+def write_table():
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    cursor.execute("""
+        INSERT INTO messages (user_id, message_text)
+        VALUES ('testing', 'This is a test message');
+    """)
+    connection.commit()
+    connection.close()

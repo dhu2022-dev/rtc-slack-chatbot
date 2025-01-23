@@ -10,6 +10,8 @@ def main():
     # test writing to database
     db.write_table()
 
+    # test reading from database getting just user is testing
+    db.read_table()
     # sending test message
     # send_message(channel_id="T088KLH1DFX", text="emily testing :,)")
 

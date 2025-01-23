@@ -36,3 +36,15 @@ def write_table():
     """)
     connection.commit()
     connection.close()
+
+def read_table():
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    cursor.execute("""
+        SELECT * FROM messages WHERE user_id = 'testing';
+    """)
+
+    testing_records = cursor.fetchall()
+    print(testing_records)
+    connection.commit()
+    connection.close()

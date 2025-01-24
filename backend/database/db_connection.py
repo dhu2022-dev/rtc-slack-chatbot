@@ -1,0 +1,1 @@
+# This file Centralizes AWS RDS database connection

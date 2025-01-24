@@ -9,7 +9,7 @@ theme:
   font:
     text: "Inter"            # Text font matching BAI site
     code: "Fira Code"        # Monospace font for code blocks
-  logo: "images/logo.png"    # Path to your logo (add this image to your `docs/images` folder)
+  logo: "images/logo.png"    # Path to BAI Logo
 
 extra_css:
   - styles/extra.css

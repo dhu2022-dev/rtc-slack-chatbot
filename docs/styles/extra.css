@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+:root {
+    --md-primary-fg-color: #6f42c1; /* Purple primary color */
+    --md-accent-fg-color: #d63384; /* Pink accent color */
+    --md-default-bg-color: #0d1117; /* Dark background */
+    --md-default-fg-color: #ffffff; /* White text */
+}

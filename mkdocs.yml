@@ -3,6 +3,16 @@ site_url: "https://dhu2022-dev.github.io/BAI_RTC/"
 
 theme:
   name: material
+  palette:
+    primary: "purple"        # Primary color to match your website
+    accent: "pink"           # Accent color for buttons/links
+  font:
+    text: "Inter"            # Text font matching BAI site
+    code: "Fira Code"        # Monospace font for code blocks
+  logo: "images/logo.png"    # Path to your logo (add this image to your `docs/images` folder)
+
+extra_css:
+  - styles/extra.css
 
 plugins:
   - search

@@ -19,3 +19,4 @@ Thumbs.db
 
 # Exclude temporary files
 *.swp
+package.json

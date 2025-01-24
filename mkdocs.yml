@@ -1,0 +1,26 @@
+site_name: BAI x RTC NLP Slack Chatbot Documentation
+site_url: "https://dhu2022-dev.github.io/BAI_RTC/"
+
+theme:
+  name: material
+  palette:
+    primary: "purple"        # Primary color to match your website
+    accent: "pink"           # Accent color for buttons/links
+  font:
+    text: "Inter"            # Text font matching BAI site
+    code: "Fira Code"        # Monospace font for code blocks
+  logo: "images/logo.png"    # Path to BAI Logo
+
+extra_css:
+  - styles/extra.css
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - API Endpoints: api_endpoints.md
+  - Architecture: architecture.md
+  - Database Schema: database_schema.md
+  - Deployment Guide: deployment.md
+  - Usage Guide: usage_guide.md

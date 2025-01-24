@@ -1,4 +1,5 @@
 site_name: BAI x RTC NLP Slack Chatbot Documentation
+site_url: "https://dhu2022-dev.github.io/BAI_RTC/"
 
 theme:
   name: material

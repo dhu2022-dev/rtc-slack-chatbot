@@ -1,2 +1,4 @@
 .env
 package.json
+venv/
+.env/

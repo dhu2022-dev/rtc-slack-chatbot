@@ -1,11 +1,15 @@
-import slack
 import os
-from pathlib import Path
+from slack_sdk import WebClient
 from dotenv import load_dotenv
+from pathlib import Path
 
-env_path = Path('.') / '.env'
+# Load environment variables
+env_path = Path('../../') / '.env'
 load_dotenv(dotenv_path=env_path)
 
-client = slack.WebClient(token=os.environ['SLACK_API_TOKEN'])
+# Initialize Slack client
+client = WebClient(token=os.getenv("SLACK_API_TOKEN"))
 
-client.chat_postMessage(channel='#test', text="testing api endpoints")
+# Send a test message
+response = client.chat_postMessage(channel="#test", text="What's good friends, it's David.")
+print(response)

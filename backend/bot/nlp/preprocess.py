@@ -1,18 +1,36 @@
-# File that preprocesses input text
-
-import spacy
+import psycopg2
+import os
 import re
+from backend.database.database import get_db_connection  # Ensure connection function is imported
 
-nlp = spacy.load("en_core_web_sm")
 
-def extract_entities(text: str) -> dict:
-    doc = nlp(text)
-    entities = {ent.label_: ent.text for ent in doc.ents}
+def fetch_relevant_message(query: str) -> str:
+    """
+    Searches past messages in the database and returns the most relevant one.
+    """
+    connection = get_db_connection()
+    cursor = connection.cursor()
 
-    # Custom regex-based extraction
-    email_pattern = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-    emails = re.findall(email_pattern, text)
-    if emails:
-        entities["EMAIL"] = emails[0]
+    # Extract keywords (simple regex-based keyword search)
+    keywords = re.findall(r'\b\w+\b', query.lower())
 
-    return entities
+    # If there are no keywords, return nothing
+    if not keywords:
+        return "I couldn't find anything relevant."
+
+    # Build SQL query to search past messages
+    sql_query = f"""
+        SELECT message_text FROM messages
+        WHERE {' OR '.join([f"message_text ILIKE '%{kw}%'" for kw in keywords])}
+        ORDER BY timestamp DESC LIMIT 1;
+    """
+
+    cursor.execute(sql_query)
+    result = cursor.fetchone()
+    connection.close()
+
+    if result:
+        return result[0]  # Return the most relevant message
+    else:
+        return "I couldn't find anything relevant."
+

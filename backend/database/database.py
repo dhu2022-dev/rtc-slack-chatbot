@@ -22,8 +22,8 @@ def create_table():
             id SERIAL PRIMARY KEY,
             user_id VARCHAR(50),
             message_text TEXT,
-            intent VARCHAR(100),  -- New column for intent classification
-            entities JSONB,  -- New column to store extracted entities as JSON
+            intent VARCHAR(100),
+            entities JSONB,
             timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
     """)

@@ -1,7 +1,7 @@
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
-from backend.bot.nlp.preprocess import fetch_relevant_message
-from backend.database.database import store_message
+from backend.bot.nlp.preprocess.preprocess import fetch_relevant_message
+from backend.database.schema_manager import store_message
 import os
 
 # Initialize Slack client

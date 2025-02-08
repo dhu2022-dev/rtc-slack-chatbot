@@ -20,3 +20,8 @@ class S3Manager:
             Body=json.dumps(data, indent=4),
             ContentType="application/json"
         )
+
+    def list_files_in_directory(self, prefix):
+        """List all files in the given S3 directory."""
+        response = self.s3_client.list_objects_v2(Bucket=self.bucket_name, Prefix=prefix)
+        return [obj["Key"] for obj in response.get("Contents", []) if obj["Key"].endswith(".json")]

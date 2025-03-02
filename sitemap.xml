@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/api_endpoints/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/architecture/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/database_schema/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/deployment/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dhu2022-dev.github.io/BAI_RTC/usage_guide/</loc>
+         <lastmod>2025-03-02</lastmod>
+    </url>
+</urlset>

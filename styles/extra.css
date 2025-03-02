@@ -1,0 +1,33 @@
+/* color pallette*/
+:root {
+    --md-primary-fg-color: #6f42c1; /* Club's primary purple */
+    --md-accent-fg-color: #d63384; /* Club's pink */
+    --md-default-bg-color: #0d1117; /* Dark background */
+    --md-default-fg-color: #ffffff; /* White text */
+    --md-header-color: #ffffff;     /* Header text color */
+  }
+  
+  .md-header-nav {
+    background-color: #0d1117; /* Navbar matches the site background */
+  }
+  
+  .md-header-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .md-nav__link:hover {
+    color: #d63384; /* Hover links use accent color */
+  }
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
